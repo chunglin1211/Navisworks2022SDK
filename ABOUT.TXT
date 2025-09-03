@@ -1,0 +1,621 @@
+Autodesk® Navisworks® API SDK 2015 © 2014 Autodesk, Inc.  All rights reserved.  
+
+All use of this Software is subject to the terms and conditions of the Autodesk license agreement accepted upon installation of this Software and/or packaged with the Software.
+
+This Product or Service may incorporate or use background Autodesk technology components.  For information about these components, click here: http://www.autodesk.com/cloud-platform-components.
+
+
+Trademarks
+Autodesk, the Autodesk logo, FBX, and Navisworks are registered trademarks or trademarks of Autodesk, Inc., and/or its subsidiaries and/or affiliates.
+
+ArchVision, realpeople, and RPC are either registered trademarks or trademarks of ArchVision, Inc. 
+
+Intel, Xeon and Pentium are registered trademarks or trademarks of Intel Corporation or its subsidiaries in the United States and other countries. 
+
+LightWorks, the LightWorks logo, LWA and LWA-Enabled are registered trademarks of LightWork Design Ltd.
+
+mental ray is a registered trademark of NVIDIA ARC GmbH, licensed for use by Autodesk, Inc. 
+
+Python is a registered trademark of Python Software Foundation. 
+
+Microsoft, Direct3D, DirectX, Excel, Windows, are either registered trademarks or trademarks of Microsoft Corp. in the United States and/or other countries.
+
+All other brand names, product names or trademarks belong to their respective holders.
+
+
+Patents
+
+Protected by each of the following patent: 7,254,235 
+
+
+Third-Party Software Credits and Attributions
+
+Portions relating to NSIS v.2.4.5 are Copyright © 1995-2009 Contributors.
+
+---
+
+Microsoft Visual C++ Redistributable Package © 1993–2007 Microsoft Corp.  All rights reserved.
+
+---
+
+Development tools and related technology provided under license from 3Dconnexion. (C) 1992-2009 3Dconnexion. All rights reserved.
+
+
+Portions relating to OpenEXR 1.6.0 Copyright © 2004, Industrial Light & Magic, a division of Lucas Digital Ltd. LLC.  All rights reserved. 
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution. Neither the name of Industrial Light & Magic nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
+
+Portions relating to JPEG software is copyright © 1991-1998, Thomas G. Lane.  All Rights Reserved.  This software is based in part on the work of the Independent JPEG Group.
+
+Portions relating to TIFF © Copyright 1988-1997 Sam Leffler. © Copyright 1991-1997 Silicon Graphics, Inc. All rights reserved. Permission to use, copy, modify, distribute, and sell this software and its documentation for any purpose is hereby granted without fee, provided that (i) the above copyright notices and this permission notice appear in all copies of the software and related documentation, and (ii) the names of Sam Leffler and Silicon Graphics may not be used in any advertising or publicity relating to the software without the specific, prior written permission of Sam Leffler and Silicon Graphics.
+THE SOFTWARE IS PROVIDED “AS-IS” AND WITHOUT WARRANTY OF ANY KIND, EXPRESS, IMPLIED OR OTHERWISE, INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.  IN NO EVENT SHALL SAM LEFFLER OR SILICON GRAPHICS BE LIABLE FOR ANY SPECIAL, INCIDENTIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OF ANY KIND, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER OR NOT ADVISED OF THE POSSIBILITY OF DAMAGE, AND ON ANY THEORY OF LIABIBITLY, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+
+Portions related to AXIS2/C v1.6.0 are Copyright (C) 2009 The Apache Software Foundation. Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at     http://www.apache.org/licenses/LICENSE-2.0. Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.   See the License for the specific language governing permissions and limitations under the License.
+
+
+CMake - Cross Platform Makefile Generator
+Copyright 2000-2009 Kitware, Inc., Insight Software Consortium
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+* Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+* Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+* Neither the names of Kitware, Inc., the Insight Software Consortium, nor the names of their contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+Portions related to expat are Copyright (c) 1998, 1999, 2000 Thai Open Source Software Center Ltd and Clark Cooper;  Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006 Expat maintainers.
+Permission is hereby granted, free of charge, to any person obtaining  a copy of this software and associated documentation files (the  "Software"), to deal in the Software without restriction, including  without limitation the rights to use, copy, modify, merge, publish,  distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to  the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+Portions relating to Libxml2 2.7.8 Copyright (c) 1998-2003 Daniel Veillard.  All Rights Reserved.  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.  
+
+
+Portions related to FIPS 180-2 SHA-224/256/384/512 are Copyright (C) 2005, 2007 Olivier Gay <>  All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+  1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+  3. Neither the name of the project nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+THIS SOFTWARE IS PROVIDED BY THE PROJECT AND CONTRIBUTORS  “AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE PROJECT OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY  OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF  SUCH DAMAGE.
+
+
+This Autodesk software uses the FreeImage open source image library v.3.5.14, “as is” and unmodified. See http://freeimage.sourceforge.net for details. FreeImage is used and available under the FreeImage Public License-version 1.0.
+
+
+Portions of this software are copyright © 2006 The FreeType Project (www.freetype.org). All rights reserved.
+
+
+Portions related to libiconv are Copyright 1999-2003 Free Software Foundation, Inc.  This Autodesk software contains libiconv v.1.9.2.  libiconv is licensed under the GNU Lesser General Public License v.2.1, which can be found at http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt.   A text copy of this license is included on the media provided by Autodesk or with the download of this Autodesk software.  You may obtain a copy of the source code for libiconv v.1.9.2 from www.autodesk.com/lgplsource or by sending a written request  to:
+Autodesk, Inc.
+Attention:  General Counsel
+Legal Department
+111 McInnis Parkway
+San Rafael, CA 94903
+Your written request must:
+1. Contain a self-addressed CD/DVD mailer (or envelope sufficiently large to hold a DVD) with postage sufficient to cover the amount of the current U.S. Post Office First Class postage rate for CD/DVD mailers (or the envelope you have chosen) weighing  5 ounces from San Rafael, California USA to your indicated address; and
+2. Identify: 
+a. This Autodesk software name and release number;
+b. That you are requesting  the source code for libiconv v.1.9.2; and
+c. The above URL (www.autodesk.com/lgplsource)
+so that Autodesk may properly respond to your request.  The offer to receive this libiconv v.1.9.2 source code via the above URL (www.autodesk.com/lgplsource) or by written request to Autodesk is valid for a period of three (3) years from the date you purchased your license to this Autodesk software. 
+You may modify, debug and relink libiconv to this Autodesk software as provided under the terms of the GNU Lesser General Public License v.2.1.
+
+
+Copyright © 1996 2009 Acresso Software Inc. and/or InstallShield Co. Inc. All Rights Reserved.
+
+This product contains proprietary and confidential technology, information and creative works owned by Acresso Software Inc. and/or InstallShield Co. Inc. and their respective licensors, if any. Any use, copying, publication, distribution, display, modification, or transmission of such technology in whole or in part in any form or by any means without the prior express written permission of Acresso Software Inc. and/or InstallShield Co. Inc. is strictly prohibited. Except where expressly provided by Acresso Software Inc. and/or InstallShield Co. Inc. in writing, possession of this technology shall not be construed to confer any license or rights under any Acresso Software Inc. and/or InstallShield Co. Inc. intellectual property rights, whether by estoppel, implication, or otherwise.
+
+All copies of the technology and related information, if allowed by Acresso Software Inc. and/or InstallShield Co. Inc., must display this notice of copyright and ownership in full.
+
+Trademarks 
+
+Acresso, AdminStudio, FLEXnet Connect, InstallShield, InstallShield Developer, InstallShield DevStudio, InstallShield Professional, OneClickInstall, and QuickPatch are registered trademarks or trademarks of Acresso Software Inc. and/or InstallShield Co. Inc. in the United States of America and/or other countries. All other brand and product names mentioned herein are the trademarks and registered trademarks of their respective owners.
+
+Restricted Rights Legend 
+
+The software and documentation are commercial items, as that term is defined at 48 C.F.R. §2.101, consisting of commercial computer software and commercial computer software documentation, as such terms are used in 48 C.F.R. §12.212 or 48 C.F.R. §227.2702, as applicable. Consistent with 48 C.F.R. §12.212 or 48 C.F.R. §227.2702-1 through 227.7202-4, as applicable, the commercial computer software and commercial computer software documentation are being licensed to U.S. government end users (A) only as commercial items and (B) with only those rights as are granted to all other end users pursuant to the terms and conditions set forth in the Acresso Software standard commercial agreement for this software. Unpublished rights reserved under the copyright laws of the United States of America.
+
+
+Portions related to libcurl v.7.19.7 are Copyright (c) 1996 - 2010, Daniel Stenberg, <daniel@haxx.se>. All rights reserved.
+ 
+Permission to use, copy, modify, and distribute this software for any purpose
+with or without fee is hereby granted, provided that the above copyright
+notice and this permission notice appear in all copies. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. Except as contained in this notice, the name of a copyright holder shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization of the copyright holder.
+
+
+Portions related to libtiff v.3.5.7 are Copyright (c) 1988-1997 Sam Leffler
+Copyright (c) 1991-1997 Silicon Graphics, Inc.
+Permission to use, copy, modify, distribute, and sell this software and its documentation for any purpose is hereby granted without fee, provided that (i) the above copyright notices and this permission notice appear in all copies of the software and related documentation, and (ii) the names of Sam Leffler and Silicon Graphics may not be used in any advertising or publicity relating to the software without the specific, prior written permission of Sam Leffler and Silicon Graphics. THE SOFTWARE IS PROVIDED ""AS-IS"" AND WITHOUT WARRANTY OF ANY KIND, EXPRESS, IMPLIED OR OTHERWISE, INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.  IN NO EVENT SHALL SAM LEFFLER OR SILICON GRAPHICS BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT OR CONSEQUENTIAL DAMAGES OF ANY KIND, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER OR NOT ADVISED OF THE POSSIBILITY OF DAMAGE, AND ON ANY THEORY OF LIABILITY, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+
+Portions related to Log4CPLUS v 1.1.1 are Copyright (C) 1999--2009 Contributors to log4cplus project. All rights reserved.
+   
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: 
+   1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.   
+   2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided       with the distribution.    
+THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESSED OR IMPLIED    WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES    OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE    DISCLAIMED.  IN NO EVENT SHALL THE APACHE SOFTWARE FOUNDATION OR   ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,   SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT    LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF    USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND    ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+Portions related to LuaPlus v5.1.4 are Copyright 2002-2010 Joshua C. Jensen. 
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+Portions related to MurmurHash are Copyright (c) 2009 MurmurHash2, 64-bit versions, by Austin Appleby
+Permission is hereby granted, free of charge, to any person obtaining a copyof this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+Portions related to OpenSSL v.1.0.1e are Copyright (c) 1998-2011 The OpenSSL Project. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+3. All advertising materials mentioning features or use of this software must display the following acknowledgment: "This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit. (http://www.openssl.org/)"
+4. The names "OpenSSL Toolkit" and "OpenSSL Project" must not be used to endorse or promote products derived from this software without prior written permission. For written permission, please contact openssl-core@openssl.org.
+5. Products derived from this software may not be called "OpenSSL" nor may "OpenSSL" appear in their names without prior written permission of the OpenSSL Project.
+6. Redistributions of any form whatsoever must retain the following acknowledgment:
+* "This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (http://www.openssl.org/)"
+THIS SOFTWARE IS PROVIDED BY THE OpenSSL PROJECT ``AS IS'' AND ANY EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE OpenSSL PROJECT OR ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+=========================================================
+This product includes cryptographic software written by Eric Young(eay@cryptsoft.com). This product includes software written by Tim Hudson (tjh@cryptsoft.com).
+Original SSLeay License
+-----------------------
+Copyright (C) 1995-1998 Eric Young (eay@cryptsoft.com) All rights reserved.
+This package is an SSL implementation written by Eric Young (eay@cryptsoft.com).
+* The implementation was written so as to conform with Netscapes SSL.
+This library is free for commercial and non-commercial use as long as the following conditions are aheared [sic] to. The following conditions apply to all code found in this distribution, be it the RC4, RSA, lhash, DES, etc., code; not just the SSL code. The SSL documentation included with this distribution is covered by the same copyright terms except that the holder is Tim Hudson (tjh@cryptsoft.com). Copyright remains Eric Young's, and as such any Copyright notices in the code are not to be removed. If this package is used in a product, Eric Young should be given attribution as the author of the parts of the library used. This can be in the form of a textual message at program startup or in documentation (online or textual) provided with the package.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+3. All advertising materials mentioning features or use of this software must display the following acknowledgement: "This product includes cryptographic software written by Eric Young (eay@cryptsoft.com)" The word 'cryptographic' can be left out if the rouines [sic] from the library being used are not cryptographic related :-).
+4. If you include any Windows specific code (or a derivative thereof) from the apps directory (application code) you must include an acknowledgement: "This product includes software written by Tim Hudson (tjh@cryptsoft.com)"
+THIS SOFTWARE IS PROVIDED BY ERIC YOUNG ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. The licence and distribution terms for any publically available version or derivative of this code cannot be changed. i.e. this code cannot simply be copied and put under another distribution licence [including the GNU Public Licence.]
+
+This Autodesk software contains OpenSSL plugin to Qt Cryptographic Architecture v2.0.0 beta3 (OpenSSL plugin to QCA), as modified by Autodesk.  OpenSSL plugin to QCA is licensed under the GNU Lesser General Public License v.2.1, which can be found at http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt.   A text copy of this license is included on the media provided by Autodesk or with the download of this Autodesk software.  You may obtain a copy of the source code for OpenSSL plugin to QCA v2.0.0 beta3, as modified by Autodesk, from www.autodesk.com/lgplsource or by sending a written request  to:
+Autodesk, Inc.
+Attention:  General Counsel
+Legal Department
+111 McInnis Parkway
+San Rafael, CA 94903
+Your written request must:
+1. Contain a self-addressed CD/DVD mailer (or envelope sufficiently large to hold a DVD) with postage sufficient to cover the amount of the current U.S. Post Office First Class postage rate for CD/DVD mailers (or the envelope you have chosen) weighing  5 ounces from San Rafael, California USA to your indicated address; and
+2. Identify:
+a. This Autodesk software name and release number;
+b. That you are requesting  the source code for OpenSSL plugin to QCA v2.0.0 beta3, as modified by Autodesk; and
+c. The above URL (www.autodesk.com/lgplsource)
+so that Autodesk may properly respond to your request.  The offer to receive this OpenSSL plugin to QCA source code via the above URL (www.autodesk.com/lgplsource) or by written request to Autodesk is valid for a period of three (3) years from the date you purchased your license to this Autodesk software. 
+You may modify, debug and relink OpenSSL plugin to QCA to this Autodesk software as provided under the terms of the GNU Lesser General Public License v.2.1.
+
+
+Portions related to open-vcdiff are Copyright 2008 © Google, Inc. 
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.   You may obtain a copy of the License at       http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the License for the specific language governing permissions and limitations under the License.
+
+
+Portions related to Paul Hsieh Super Fast Hash are Copyright (c) 2004-2007 Paul Hsieh 
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: 
+Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.  Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.  
+ Neither the name of the Paul Hsieh nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.  
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+This Autodesk software contains Qt Cryptographic Architecture v. 2.0.2 (QCA).  QCA is licensed under the GNU Lesser General Public License v.2.1, which can be found at http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt.   A text copy of this license is included on the media provided by Autodesk or with the download of this Autodesk software.  You may obtain a copy of the source code for QCA v 2.0.2 from www.autodesk.com/lgplsource or by sending a written request  to:
+Autodesk, Inc.
+Attention:  General Counsel
+Legal Department
+111 McInnis Parkway
+San Rafael, CA 94903
+Your written request must:
+1. Contain a self-addressed CD/DVD mailer (or envelope sufficiently large to hold a DVD) with postage sufficient to cover the amount of the current U.S. Post Office First Class postage rate for CD/DVD mailers (or the envelope you have chosen) weighing  5 ounces from San Rafael, California USA to your indicated address; and
+2. Identify: 
+a. This Autodesk software name and release number; 
+b. That you are requesting the source code for QCA v 2.0.2; and
+c. The above URL (www.autodesk.com/lgplsource)
+so that Autodesk may properly respond to your request.  The offer to receive this QCA source code via the above URL (www.autodesk.com/lgplsource) or by written request to Autodesk is valid for a period of three (3) years from the date you purchased your license to this Autodesk software. 
+You may modify, debug and relink QCA to this Autodesk software as provided under the terms of the GNU Lesser General Public License v.2.1.
+
+
+Portions related to QJson v 0.8.1 are
+Copyright (C) 2002, 2003, 2004, 2005, 2006 Free Software Foundation, Inc.
+Copyright (C) 2009 Flavio Castelli <flavio@castelli.name> 2009 Frank Osterfeld <osterfeld@kde.org>
+Copyright (C) 2008 Flavio Castelli <flavio.castelli@gmail.com>
+Copyright (C) 2009 Till Adam <adam@kde.org>
+Copyright (C) 2009 Michael Leupold <lemma@confuego.org>
+Copyright (C) 2009 Flavio Castelli <flavio@castelli.name>
+Copyright (C) 2009 Frank Osterfeld <osterfeld@kde.org>
+Copyright (C) 2009 Pino Toscano <pino@kde.org>
+Copyright (C) 2010 Flavio Castelli <flavio@castelli.name>
+
+Portions related to QJson v 0.8.1 are Copyright 1999-2012 Gentoo Foundation. This Autodesk software contains QJson v.0.8.1, as modified by Autodesk, Inc.  QJson is licensed under the GNU Lesser General Public License v.2.1, which can be found at http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt.   A text copy of this license is included on the media provided by Autodesk or with the download of this Autodesk software.  You may obtain a copy of the source code for QJson v.0.8.1 as modified by Autodesk, Inc. from www.autodesk.com/lgplsource or by sending a written request to:
+Autodesk, Inc.
+Attention:  General Counsel
+Legal Department
+111 McInnis Parkway
+San Rafael, CA 94903
+Your written request must:
+1. Contain a self-addressed CD/DVD mailer (or envelope sufficiently large to hold a DVD) with postage sufficient to cover the amount of the current U.S. Post Office First Class postage rate for CD/DVD mailers (or the envelope you have chosen) weighing 5 ounces from San Rafael, California USA to your indicated address; and
+2.  Identify:
+a. This Autodesk software name and release number;
+b. That you are requesting the source code for QJson v.0.8.1, as modified by Autodesk; and
+c. The above URL (www.autodesk.com/lgplsource)
+so that Autodesk may properly respond to your request.  The offer to receive this QJson v 0.8.1 source code via the above URL (www.autodesk.com/lgplsource) or by written request to Autodesk is valid for a period of three (3) years from the date you purchased your license to this Autodesk software. You may modify, debug and relink QJson v0.8.1 to this Autodesk software as provided under the terms of the GNU Lesser General Public License v.2.1.
+
+
+Portions related to QOAuth are Copyright (C) 2010 Dominik Kapusta <d@ayoy.net>
+This Autodesk software contains QOAuth v 1.0, as modified by Autodesk.  QOAuth is licensed under the GNU Lesser General Public License v.2.1, which can be found at http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt.   A text copy of this license is included on the media provided by Autodesk or with the download of this Autodesk software.  You may obtain a copy of the source code for QOAuth v 1.0, as modified by Autodesk, from www.autodesk.com/lgplsource or by sending a written request to:
+Autodesk, Inc.
+Attention:  General Counsel
+Legal Department
+111 McInnis Parkway
+San Rafael, CA 94903
+Your written request must:
+1. Contain a self-addressed CD/DVD mailer (or envelope sufficiently large to hold a DVD) with postage sufficient to cover the amount of the current U.S. Post Office First Class postage rate for CD/DVD mailers (or the envelope you have chosen) weighing 5 ounces from San Rafael, California USA to your indicated address; and
+2. Identify:
+a. This Autodesk software name and release number;
+b. That you are requesting the source code for QOAuth v 1.0, as modified by Autodesk; and
+c. The above URL (www.autodesk.com/lgplsource)
+so that Autodesk may properly respond to your request.  The offer to receive this QOAuth v 1.0 source code via the above URL (www.autodesk.com/lgplsource) or by written request to Autodesk is valid for a period of three (3) years from the date you purchased your license to this Autodesk software. 
+You may modify, debug and relink QOAuth v 1.0 to this Autodesk software as provided under the terms of the GNU Lesser General Public License v.2.1.
+
+
+Portions related to Qt v.4.8.5 are Copyright (C) 2012 Digia Plc and/or its subsidiary(-ies). All rights reserved. This Autodesk software contains Qt v. 4.8.5, as modified by Autodesk.  Qt is licensed under the GNU Lesser General Public License v.2.1, which can be found at http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt.   A text copy of this license is included on the media provided by Autodesk or with the download of this Autodesk software.  You may obtain a copy of the source code for Qt v. 4.8.5, as modified by Autodesk, from www.autodesk.com/lgplsource or by sending a written request to:
+Autodesk, Inc.
+Attention:  General Counsel
+Legal Department
+111 McInnis Parkway
+San Rafael, CA 94903
+Your written request must:
+1.	Contain a self-addressed CD/DVD mailer (or envelope sufficiently large to hold a DVD) with postage sufficient to cover the amount of the current U.S. Post Office First Class postage rate for CD/DVD mailers (or the envelope you have chosen) weighing  5 ounces from San Rafael, California USA to your indicated address; and
+2.	Identify:
+a.	This Autodesk software name and release number;
+b.	That you are requesting  the source code for Qt v. 4.8.5, as modified by Autodesk; and
+c.	The above URL (www.autodesk.com/lgplsource)
+so that Autodesk may properly respond to your request.  The offer to receive this Qt source code via the above URL (www.autodesk.com/lgplsource) or by written request to Autodesk is valid for a period of three (3) years from the date you purchased your license to this Autodesk software. 
+You may modify, debug and relink Qt to this Autodesk software as provided under the terms of the GNU Lesser General Public License v.2.1.
+
+
+Portions related to Qt MFC Migration Framework are Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). This Autodesk software contains Qt MFC Migration Framework v.2.8, as modified by Autodesk, Inc..  Qt MFC Migration Framework is licensed under the GNU Lesser General Public License v.2.1, which can be found at http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt.   A text copy of this license is included on the media provided by Autodesk or with the download of this Autodesk software.  You may obtain a copy of the source code for Qt MFC Migration Framework v.2.8, as modified by Autodesk, Inc., from www.autodesk.com/lgplsource or by sending a written request  to:
+Autodesk, Inc.
+Attention:  General Counsel
+Legal Department
+111 McInnis Parkway
+San Rafael, CA 94903
+Your written request must:
+1. Contain a self-addressed CD/DVD mailer (or envelope sufficiently large to hold a DVD) with postage sufficient to cover the amount of the current U.S. Post Office First Class postage rate for CD/DVD mailers (or the envelope you have chosen) weighing  5 ounces from San Rafael, California USA to your indicated address; and
+2. Identify:
+a. This Autodesk software name and release number;
+b. That you are requesting  the source code for Qt MFC Migration Framework v.2.8, as modified by Autodesk, Inc.; and
+c. The above URL (www.autodesk.com/lgplsource)
+so that Autodesk may properly respond to your request.  The offer to receive this Qt MFC Migration Framework source code, as modified by Autodesk, Inc.,  via the above URL (www.autodesk.com/lgplsource) or by written request to Autodesk is valid for a period of three (3) years from the date you purchased your license to this Autodesk software. 
+You may modify, debug and relink Qt MFC Migration Framework to this Autodesk software as provided under the terms of the GNU Lesser General Public License v.2.1.
+
+
+Portions related to sparsehash are Copyright (C) 2005, Google Inc.  All rights reserved.
+ Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+  1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+  3. Neither the name of the project nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+ THIS SOFTWARE IS PROVIDED BY THE PROJECT AND CONTRIBUTORS ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE  ARE DISCLAIMED.  IN NO EVENT SHALL THE PROJECT OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL  DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY  OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF  SUCH DAMAGE.
+
+
+This product includes the SwiftShader Software GPU Toolkit, Copyright (c) 2003-2011 Transgaming, Inc. All rights reserved.
+
+
+Portions related to Intel® Threading Building Blocks v.4.1 are Copyright (C) 2005-2012 Intel Corporation.  All Rights Reserved.
+
+
+Portions relating to TIFF © Copyright 1988-1997 Sam Leffler. © Copyright 1991-1997 Silicon Graphics, Inc. All rights reserved. Permission to use, copy, modify, distribute, and sell this software and its documentation for any purpose is hereby granted without fee, provided that (i) the above copyright notices and this permission notice appear in all copies of the software and related documentation, and (ii) the names of Sam Leffler and Silicon Graphics may not be used in any advertising or publicity relating to the software without the specific, prior written permission of Sam Leffler and Silicon Graphics.
+THE SOFTWARE IS PROVIDED “AS-IS” AND WITHOUT WARRANTY OF ANY KIND, EXPRESS, IMPLIED OR OTHERWISE, INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.  IN NO EVENT SHALL SAM LEFFLER OR SILICON GRAPHICS BE LIABLE FOR ANY SPECIAL, INCIDENTIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OF ANY KIND, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER OR NOT ADVISED OF THE POSSIBILITY OF DAMAGE, AND ON ANY THEORY OF LIABIBITLY, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+
+Portions relating to Libxerces-c 2.7.0 are copyright 1999-2000, 2004 The Apache Software Foundation.  Licensed under the Apache License, Version 2.0 (the “License”); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.  Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an “AS IS” BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+
+This AirMax software includes RealDWG as follows:
+
+© 2014 Autodesk, Inc.  All rights reserved.  
+
+
+All use of this Software is subject to the terms and conditions of the Autodesk license agreement accepted upon installation of this Software and/or packaged with the Software.
+
+This Product or Service may incorporate or use background Autodesk technology components.  For information about these components, click here: http://www.autodesk.com/cloud-platform-components.
+
+Trademarks
+
+The following are registered trademarks or trademarks of Autodesk, Inc., and/or its subsidiaries and/or affiliates in the USA and other countries: 
+The following are registered trademarks or trademarks of Autodesk, Inc., and/or its subsidiaries and/or affiliates in the USA and other countries: 123D, 3ds Max, Algor, Alias, AliasStudio, ATC, AutoCAD LT, AutoCAD, Autodesk, the Autodesk logo, Autodesk 123D, Autodesk Homestyler, Autodesk Inventor, Autodesk MapGuide, Autodesk Streamline, AutoLISP, AutoSketch, AutoSnap, AutoTrack, Backburner, Backdraft, Beast, BIM 360, Burn, Buzzsaw, CADmep, CAiCE, CAMduct, CFdesign, Civil 3D, Cleaner, Combustion, Communication Specification, Constructware, Content Explorer, Creative Bridge, Dancing Baby (image), DesignCenter, DesignKids, DesignStudio, Discreet, DWF, DWG, DWG (design/logo), DWG Extreme, DWG TrueConvert, DWG TrueView, DWGX, DXF, Ecotect, ESTmep, Evolver, FABmep, Face Robot, FBX, Fempro, Fire, Flame, Flare, Flint, FMDesktop, ForceEffect, FormIt, Freewheel, Fusion 360, Glue, Green Building Studio, Heidi, Homestyler, HumanIK, i-drop, ImageModeler, Incinerator, Inferno, InfraWorks, Instructables, Instructables (stylized robot design/logo), Inventor LT, Inventor, Kynapse, Kynogon, LandXplorer, Lustre, MatchMover, Maya, Maya LT, Mechanical Desktop, MIMI, Mockup 360, Moldflow Plastics Advisers, Moldflow Plastics Insight, Moldflow, Moondust, MotionBuilder, Movimento, MPA (design/logo), MPA, MPI (design/logo), MPX (design/logo), MPX, Mudbox, Navisworks, ObjectARX, ObjectDBX, Opticore, Pipeplus, Pixlr, Pixlr-o-matic, Productstream, RasterDWG, RealDWG, ReCap, Remote, Revit LT, Revit, RiverCAD, Robot, Scaleform, Showcase, ShowMotion, Sim 360, SketchBook, Smoke, Socialcam, Softimage, Sparks, SteeringWheels, Stitcher, Stone, StormNET, TinkerBox, ToolClip, Topobase, Toxik, TrustedDWG, T-Splines, ViewCube, Visual LISP, Visual, VRED, Wire, Wiretap, WiretapCentral, XSI
+
+
+ACIS Geometric Modeler is the registered trademark of SPATIAL TECHNOLOGY, INC.
+
+Microsoft and Visual Basic are registered trademarks in the United States and other countries and the Microsoft Visual Basic Technology logo is a trademark of Microsoft Corporation.
+
+PANTONE MATCHING SYSTEM® and PANTONE® PLUS SERIES registered trademarks of Pantone LLC.
+
+Wise Solutions is either a registered trademark or trademark of Wise Solutions, Inc., in the United States and/or other countries.
+
+Adobe, Acrobat, Acrobat Reader, Adobe PDF (logo), Flash, OpenType (logo), Reader, and Streamline are either registered trademarks or trademarks of Adobe Systems, Inc., in the United States and/or other countries.
+
+Microsoft, ActiveX, Direct3D, DirectX, Excel, Microsoft Internet Explorer (logo), OpenType, Tahoma, Windows, Windows (logo), Windows NT, and Windows Start (logo) are either registered trademarks or trademarks of Microsoft Corp. in the United States and/or other countries.
+
+Spatial, ACIS, and SAT are either registered trademarks or trademarks of Spatial Corp. in the United States and/or other countries.
+
+HP Instant Printing is a registered Trademark of Hewlett-Packard Company.
+
+D-Cubed is a trademark of Siemens Industry Software Limited.
+
+Citrix is a registered trademark and the Citrix Ready logo(s) is a trademark of Citrix Systems, Inc.
+
+All other brand names, product names or trademarks belong to their respective holders.
+
+Patents
+
+Protected by each of the following patents:  U.S. Patent Nos.  6,363,503, 7,168,012, 6,888,542,  5,528,260, 5,793,377, 5,760,716, 5,990,911, 5,818,460, 6,111,587, 6,040,830, 6,803,927, 5,990,864, 6,058,219, 6,232,985, 6,232,983, 6,717,587, 6,219,056, 6,064,386, 6,462,751, 6,999,102, 6,025,849, 6,463,180, 6,081,624, 6,370,602, 6,219,772, 6,512,519, 6,396,420, 5,572,639, 6,323,859, 6,573,903, 6,016,147, 7,098,933, 6,480,813, 6,346,943, 6,911,981, 5,982,399, 6,401,141, 6,392,662, 6,046,749, 6,281,906, 6,801,217, 6,918,087, 6,556,227, 7,000,197, 6,353,441, 6,369,829, 6,417,865, 6,628,285, 6,823,299, 6,646,641, 6,683,622, 6,848,082, 7,366,980, 7,016,922, 6,954,895, 6,992,680, 6,870,546, 6,675,355, 6,964,015, 6,836,886, 6,670,961, 7,401,299, 7,027,068, 6,927,768, 6,867,771, 7,359,914, 7,380,091, 7,272,698, 7,363,615, 7,287,191, 7,325,166, 6,847,384, 6,931,600, 6,144,382, 6,992,685, 7,483,827, 7,620,911, 7,620,947, 7,526,719, 7,254,235, 7,770,135. 7,782,319, 7,047,180, 7,062,532, 7,860,691, 8,212,806, 8,255,799, 8,314,789, 8,280,916, 8,345,043, 8,132,115, 8,107,093, D623657, D624933, D625732, D625328, D625327, D623656, D623658; and patents pending.
+ 
+Third-Party Software Credits and Attributions
+
+This software is based in part on the works of the following:
+
+Additional Disclaimer:  The Citrix application is network-based, and performance of Autodesk Citrix Ready Applications may vary with network performance.  The software does not include the Citrix application, nor does Autodesk provide direct support for issues with the Citrix application.  Users should contact Citrix directly with questions related to procurement and operation of the Citrix application.
+
+Portions related to ezXML are Copyright 2004, 2005 Aaron Voisine, under the following license:
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT, SHALL THE AUTHORIS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+ACIS® © 1989–2002 Spatial Corp.
+
+Adobe® Flash® Player, Copyright © 1996-2006 Adobe Systems Incorporated. All Rights Reserved, Protected by U.S. Patent 6,879,327; Patents Pending in the United States and other countries. Adobe and Flash are either trademarks or registered trademarks in the United States and/or other countries.
+
+Adobe® Shockwave® Player. Copyright © 1996-2006 Adobe Systems Incorporated. All Rights Reserved. Adobe and Shockwave are either trademarks or registered trademarks in the United States and/or other countries. 
+
+Portions relating to Adobe Photoshop® CS4 software Copyright 1990-1991 by Thomas Knoll. Copyright 1992-1995 by Adobe Systems, Inc.
+
+Portions related to Apache Xerces DLL are Copyright © 1999-2000 The Apache Software Foundation.  All rights reserved.  This product includes software developed by the Apache Software Foundation (http://www.apache.org) subject to its license terms and conditions (http://xml.apache.org/dist/LICENSE.txt).
+
+Typefaces from the Bitstream ® typeface library Copyright © 1992.
+
+This work contains the following software owned by Siemens Industry Software Limited:
+
+D-CubedTM HLM © 2013. Siemens Industry Software Limited. All Rights Reserved.
+ 
+
+AutoCAD ® and AutoCAD LT ® products are produced under a license of data derived from DIC Color Guide ® from Dainippon Ink and Chemicals, Inc. Copyright © Dainippon Ink and Chemicals, Inc. All rights reserved. DIC and DIC Color Guide are registered trademarks of Dainippon Ink and Chemicals, Inc.
+
+Portions relating to JPEG software is copyright © 1991-1998, Thomas G. Lane.  All Rights Reserved.  Portions of this software are based on the work of the Independent JPEG Group.
+
+
+Active Delivery™ 2.0 © 1999-2004 Inner Media, Inc.  All rights reserved.
+
+
+
+LibTiff (http://www.libtiff.org), Copyright (c) 1988-1997 Sam Leffler, Copyright (c) 1991-1997 Silicon Graphics, Inc., under the following license:
+
+Permission to use, copy, modify, distribute, and sell this [libtiff] software and its documentation for any purpose is hereby granted without fee, provided that (i) the above copyright notices and this permission notice appear in all copies of the software and related documentation, and (ii) the names of Sam Leffler and Silicon Graphics may not be used in any advertising or publicity relating to the software without the specific, prior written permission of Sam Leffler and Silicon Graphics.
+
+THE SOFTWARE IS PROVIDED "AS-IS" AND WITHOUT WARRANTY OF ANY KIND, EXPRESS, IMPLIED OR OTHERWISE, INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.  
+
+IN NO EVENT SHALL SAM LEFFLER OR SILICON GRAPHICS BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT OR CONSEQUENTIAL DAMAGES OF ANY KIND, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER OR NOT ADVISED OF THE POSSIBILITY OF DAMAGE, AND ON ANY THEORY OF LIABILITY, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE
+
+
+Portions are Copyright © Lingea s.r.o. 2006.
+
+
+Portions of this computer program are copyright © 1995-2011 Celartum, Inc., doing business as LizardTech. All rights reserved. MrSID is protected by U.S. Patent No. 5,710,835. Foreign Patents Pending.
+Portions of this software code copyright © 2009-2013 Celartem Inc. dba LizardTech, 1008 Western Avenue, Suite 200, Seattle, WA 98104. Unauthorized use or distribution prohibited. Access to and use of this code is permitted only under license from LizardTech. Portions of the code are protected by US and foreign patents and other filings. All rights reserved. 
+
+
+ 
+Copyright © 1996-2012 Microsoft Corporation. All rights reserved
+
+Portions utilize Microsoft Windows Media Technologies. Copyright © 1999-2004 Microsoft Corporation. All Rights Reserved.
+Portions utilize StdString.h Copyright © 2002 Joseph M. O’Leary.
+
+
+PANTONE® Colors displayed in the software application or in the user documentation may not match PANTONE-identified standards.  Consult current PANTONE Color Publications for accurate color.  
+PANTONE® and other Pantone trademarks are the property of Pantone LLC. © Pantone LLC 2010
+
+Pantone is the copyright owner of color data and/or software which are licensed to Autodesk, Inc., to distribute for use only in combination with certain Autodesk software products.  PANTONE Color Data and/or Software shall not be copied onto another disk or into memory unless as part of the execution of this Autodesk software product. 
+
+
+Portions Copyright 1992, 1996 Payne Loving Trust, All rights reserved.
+
+
+PDF technology powered by PDFNet SDk copyright © PDFTron™ Systems Inc., 2001-2008, and distributed by Autodesk, Inc, under license. All rights reserved. 
+
+
+Portions of the subdivision surface implementation technology are protected by U.S. patents 6,037,949, 6,222,553, 6,300,960, and 6,489,960 and used under license from Pixar. Use of the Pixar creasing software may require a license under patents owned by Pixar. 
+
+
+© RAL, Sankt Augustin 2013
+Representation of the RAL Colours is done with the approval of RAL gGmbH, 53757 Sankt Augustin 
+
+The Sentry Spelling-Checker Engine Copyright © 1994-2003 Wintertree Software, Inc.
+
+
+Portions of this product include one or more Boost libraries.  Boost Software License – Version 1.0– August 17th, 2003, under the following license:
+
+Permission is hereby granted, free of charge, to any person or organization obtaining a copy of the software and accompanying documentation covered by this license (the “Software”) to use, reproduce, display, distribute, execute, and transmit the Software, and to prepare derivative works of the Software, and to permit third-parties to whom the Software is furnished to do so, all subject to the following:
+
+The copyright notices in the Software and this entire statement, including the above license grant, this restriction and the following disclaimer, must be included in all copies of the Software, in whole or in part, and all derivative works of the Software, unless such copies or derivative works are solely in the form of machine-executable object code granted by a source language processor.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT, IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE SOFTWARE BE LIABLE FOR ANY DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Certain portions Copyright © 2011 Bentley Systems, Incorporated. All rights reserved.
+
+Portions related to Chromium Embedded Framework are  Copyright (c) 2008-2013 Marshall A. Greenblatt. Portions Copyright (c) 2006-2009 Google Inc. All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+* Redistributions of source code must retain the above copyright  notice, this list of conditions and the following disclaimer.
+* Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+ * Neither the name of Google Inc. nor the name Chromium Embedded Framework nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior
+written permission.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Portions related to Apple Webkit are Copyright (C) 2005, 2006, 2007, 2008, 2009 Apple Inc. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1.  Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2.  Redistributions in binary form must reproduce the above copyright   notice, this list of conditions and the following disclaimer in the    documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY APPLE INC. AND ITS CONTRIBUTORS ``AS IS'' AND ANYEXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL APPLE INC. OR ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+libpng versions 1.2.6, August 15, 2004, through 1.6.8, December 19, 2013, are
+Copyright (c) 2004, 2006-2013 Glenn Randers-Pehrson, and are
+distributed according to the same disclaimer and license as libpng-1.2.5
+with the following individual added to the list of Contributing Authors
+   Cosmin Truta
+libpng versions 1.0.7, July 1, 2000, through 1.2.5 - October 3, 2002, are
+Copyright (c) 2000-2002 Glenn Randers-Pehrson, and are distributed according to the same disclaimer and license as libpng-1.0.6 with the following individuals added to the list of Contributing Authors Simon-Pierre Cadieux
+Eric S. Raymond, Gilles Vollant and with the following additions to the disclaimer:
+There is no warranty against interference with your enjoyment of the library or against infringement. There is no warranty that our efforts or the library will fulfill any of your particular purposes or needs. This library is provided with all faults, and the entire risk of satisfactory quality, performance, accuracy, and effort is with the user.
+libpng versions 0.97, January 1998, through 1.0.6, March 20, 2000, are
+Copyright (c) 1998, 1999 Glenn Randers-Pehrson, and are distributed according to the same disclaimer and license as libpng-0.96, with the following individuals added to the list of Contributing Authors:
+Tom Lane
+Glenn Randers-Pehrson
+Willem van Schaik
+libpng versions 0.89, June 1996, through 0.96, May 1997, are
+Copyright (c) 1996, 1997 Andreas Dilger
+Distributed according to the same disclaimer and license as libpng-0.88,
+with the following individuals added to the list of Contributing Authors:
+John Bowler
+Kevin Bracey
+Sam Bushell
+Magnus Holmgren
+Greg Roelofs
+Tom Tanner
+libpng versions 0.5, May 1995, through 0.88, January 1996, are
+Copyright (c) 1995, 1996 Guy Eric Schalnat, Group 42, Inc.
+For the purposes of this copyright and license, "Contributing Authors"
+is defined as the following set of individuals:
+Andreas Dilger
+Dave Martindale
+Guy Eric Schalnat
+Paul Schmidt
+Tim Wegner
+The PNG Reference Library is supplied "AS IS". The Contributing Authors
+and Group 42, Inc. disclaim all warranties, expressed or implied, including, without limitation, the warranties of merchantability and of fitness for any purpose. The Contributing Authors and Group 42, Inc. assume no liability for direct, indirect, incidental, special, exemplary, or consequential damages, which may result from the use of the PNG Reference Library, even if advised of the possibility of such damage.
+Permission is hereby granted to use, copy, modify, and distribute this source code, or portions hereof, for any purpose, without fee, subject to the following restrictions:
+1. The origin of this source code must not be misrepresented.
+2. Altered versions must be plainly marked as such and must not be misrepresented as being the original source.
+3. This Copyright notice may not be removed or altered from any source or altered source distribution.
+The Contributing Authors and Group 42, Inc. specifically permit, without fee, and encourage the use of this source code as a component to supporting the PNG file format in commercial products. If you use this source code in a product, acknowledgment is not required but would be appreciated.
+
+Portions related to google-jstemplate are Copyright 2006 Google Inc. Licensed under the Apache License, Version 2.0 (the "License");you may not use this file except in compliance with the License. You may obtain a copy of the License at      http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and   limitations under the License.
+
+Portions related to jQuery JavaScript Library are Copyright 2013 jQuery Foundation and other contributors http://jquery.com/
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Portions related to libcurl v7.23.1 are Copyright (c) 1996 - 2011, Daniel Stenberg, <daniel@haxx.se>.
+All rights reserved.
+Permission to use, copy, modify, and distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ 
+Except as contained in this notice, the name of a copyright holder shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Software without prior written authorization of the copyright holder.
+
+Portions of CS-Map v. 14.00 is (c) 2008, Autodesk, Inc. All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+* Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+* Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+* Neither the name of the Autodesk, Inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+THIS SOFTWARE IS PROVIDED BY Autodesk, Inc. ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL Autodesk, Inc. OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Portions related to Poco C++ Libraries are Copyright © 2013 Applied Informatics Software Engineering GmbH and Contributors.  
+Boost Software License - Version 1.0 - August 17th, 2003
+
+Permission is hereby granted, free of charge, to any person or organization
+obtaining a copy of the software and accompanying documentation covered by
+this license (the "Software") to use, reproduce, display, distribute,
+execute, and transmit the Software, and to prepare derivative works of the
+Software, and to permit third-parties to whom the Software is furnished to
+do so, all subject to the following:
+
+The copyright notices in the Software and this entire statement, including
+the above license grant, this restriction and the following disclaimer,
+must be included in all copies of the Software, in whole or in part, and
+all derivative works of the Software, unless such copies or derivative
+works are solely in the form of machine-executable object code generated by
+a source language processor.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. IN NO EVENT
+SHALL THE COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE SOFTWARE BE LIABLE
+FOR ANY DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.
+
+Portions related to Log4Net are Copyright © 2004-2006 The Apache Software Foundation
+Licensed under the Apache License, Version 2.0 (the "License");  you may not use this file except in compliance with the License.  You may obtain a copy of the License at       http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software  distributed under the License is distributed on an "AS IS" BASIS,  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the License for the specific language governing permissions and  limitations under the License.
+
+Portions related to Lucene.net are  Copyright 2006 The Apache Software Foundation
+The Apache Software Foundation (http://www.apache.org/).   Licensed under the Apache License, Version 2.0 (the "License");  you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software  distributed under the License is distributed on an "AS IS" BASIS,  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the License for the specific language governing permissions and  limitations under the License.
+This product includes software  developed by The Apache Software Foundation (http://www.apache.org/). The snowball stemmers in contrib/snowball/src/java/net/sf/snowball
+were developed by Martin Porter and Richard Boulton. The full snowball package is available from http://snowball.tartarus.org/ The Arabic stemmer (contrib/analyzers) comes with a default
+stopword  list that is BSD-licensed  created by Jacques Savoy.  The file resides in contrib/analyzers/common/src/resources/org/apache/lucene/analysis/ar/stopwords.txt.
+See http://members.unine.ch/jacques.savoy/clef/index.html. The Persian analyzer (contrib/analyzers) comes with a default stopword list that is BSD-licensed created by Jacques Savoy.  The file resides in contrib/analyzers/common/src/resources/org/apache/lucene/analysis/fa/stopwords.txt.
+See http://members.unine.ch/jacques.savoy/clef/index.html. Includes lib/servlet-api-2.4.jar from  Apache Tomcat The SmartChineseAnalyzer source code (under contrib/analyzers) was provided by Xiaoping Gao and copyright 2009 by www.imdict.net. ICU4J, (under contrib/collation) is licensed under an MIT styles license (contrib/collation/lib/ICU-LICENSE.txt) and Copyright (c) 1995-2008 International Business Machines Corporation and others
+
+Portions related to MediaElementPlayer are Copyright (c) 2013 John Dyer
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+---
+
+
+Portions relating to STLport v.5.0.1 are © 1999,2000 Boris Fomitchev.   Boris Fomitchev grants Licensee a non-exclusive, non-transferable, royalty-free license to use STLport and its documentation without fee.
+
+By downloading, using, or copying STLport or any portion thereof, Licensee agrees to abide by the intellectual property laws and all other applicable laws of the United States of America, and to all of the terms and conditions of this Agreement.
+
+Licensee shall maintain the following copyright and permission notices on STLport sources and its documentation unchanged : Copyright 1999,2000 Boris Fomitchev
+
+This material is provided "as is", with absolutely no warranty expressed or implied. Any use is at your own risk.
+Permission to use or copy this software for any purpose is hereby granted without fee, provided the above notices are retained on all copies. Permission to modify the code and to distribute modified code is granted, provided the above notices are retained, and a notice that the code was modified is included with the above copyright notice. 
+The Licensee may distribute binaries compiled with STLport (whether original or modified) without any royalties or restrictions.
+The Licensee may distribute original or modified STLport sources, provided that:
+•	The conditions indicated in the above permission notice are met; 
+•	The following copyright notices are retained when present, and conditions provided in accompanying permission notices are met : 
+Copyright 1994 Hewlett-Packard Company
+Copyright 1996,97 Silicon Graphics Computer Systems, Inc.
+Copyright 1997 Moscow Center for SPARC Technology.
+Permission to use, copy, modify, distribute and sell this software and its documentation for any purpose is hereby granted without fee, provided that the above copyright notice appear in all copies and that both that copyright notice and this permission notice appear in supporting documentation. Hewlett-Packard Company makes no representations about the suitability of this software for any purpose. It is provided "as is" without express or implied warranty.
+
+Permission to use, copy, modify, distribute and sell this software and its documentation for any purpose is hereby granted without fee, provided that the above copyright notice appear in all copies and that both that copyright notice and this permission notice appear in supporting documentation. Silicon Graphics makes no representations about the suitability of this software for any purpose. It is provided "as is" without express or implied warranty.
+
+Permission to use, copy, modify, distribute and sell this software and its documentation for any purpose is hereby granted without fee, provided that the above copyright notice appear in all copies and that both that copyright notice and this permission notice appear in supporting documentation. Moscow Center for SPARC Technology makes no representations about the suitability of this software for any purpose. It is provided "as is" without express or implied warranty. 
+
+-----
+
+
+Portions relating to zlib v.1.2.3 are Copyright (C) 1995-2013 Jean-loup Gailly and Mark Adler
+This software is provided 'as-is', without any express or implied warranty.  In no event will the authors be held liable for any damages arising from the use of this software.
+Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
+1. The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use this software in a product, an acknowledgment in the product documentation would be appreciated but is not required.
+2. Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
+3. This notice may not be removed or altered from any source distribution.
+Jean-loup Gailly        Mark Adler
+jloup@gzip.org          madler@alumni.caltech.edu
+
+
+
